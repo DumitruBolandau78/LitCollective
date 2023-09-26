@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;800&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  color: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #000;
+  font-family: "Manrope", sans-serif;
+  cursor: default;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container .inner {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 20px 30px;
+  width: 100%;
+  max-width: 1440px;
+}
+.container .inner .home-wrapper {
+  margin-top: 100px;
+  position: relative;
+  padding: 0 150px;
+}
+.container .inner .home-wrapper .title {
+  font-size: 60px;
+  font-weight: 200;
+  max-width: 700px;
+  width: 100%;
+}
+.container .inner .home-wrapper .vertical-col {
+  position: absolute;
+  top: 50px;
+  left: -30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 70px;
+}
+.container .inner .home-wrapper .vertical-col .letter {
+  font-weight: 800;
+  font-size: 18px;
+}
+.container .inner .home-wrapper .vertical-col .nominee {
+  transform: rotate(-90deg);
+  font-size: 15px;
+}
+.container .inner .reel-wrapper {
+  background-image: url("../images/hands.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 150px 0;
+  display: flex;
+  justify-content: center;
+}
+.container .inner .reel-wrapper .video-player {
+  transform: rotate(-7deg);
+}
+.container .inner .reel-wrapper .video-player.active {
+  transform: rotate(0deg) !important;
+}
+.container .inner .links {
+  display: flex;
+  gap: 40px;
+  margin-top: 50px;
+}
+.container .inner .links .draw-border {
+  box-shadow: inset 0 0 0 4px #58afd1;
+  color: #58afd1;
+  transition: color 0.25s 0.0833333333s;
+  position: relative;
+  padding: 15px 40px;
+}
+.container .inner .links .draw-border::before, .container .inner .links .draw-border::after {
+  border: 0 solid transparent;
+  box-sizing: border-box;
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  right: 0;
+}
+.container .inner .links .draw-border::before {
+  border-bottom-width: 4px;
+  border-left-width: 4px;
+}
+.container .inner .links .draw-border::after {
+  border-top-width: 4px;
+  border-right-width: 4px;
+}
+.container .inner .links .draw-border:hover {
+  color: #ffe593;
+}
+.container .inner .links .draw-border:hover::before, .container .inner .links .draw-border:hover::after {
+  border-color: #ffe593;
+  transition: border-color 0s, width 0.25s, height 0.25s;
+  width: 100%;
+  height: 100%;
+}
+.container .inner .links .draw-border:hover::before {
+  transition-delay: 0s, 0s, 0.25s;
+}
+.container .inner .links .draw-border:hover::after {
+  transition-delay: 0s, 0.25s, 0s;
+}
+.container .inner .links .links a {
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1.5;
+  font: 700 1.2rem "Roboto Slab", sans-serif;
+  letter-spacing: 0.05rem;
+}
+.container .inner .links .links a:focus {
+  outline: 2px dotted #55d7dc;
+}
+.container .work-together {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 20px 30px;
+  background: linear-gradient(#000, rgba(14, 14, 14, 0.91));
+}
+.container .work-together .inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1440px;
+}
+.container .work-together .logos {
+  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 40px;
+}
+.container .work-together .logos div {
+  justify-self: center;
+}
+.container .work-together .logos img {
+  width: 100%;
+  max-width: 100px;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,36 @@
+header.header {
+  display: flex;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+header.header .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  width: 100%;
+  max-width: 1440px;
+}
+header.header .right-col {
+  display: flex;
+  align-items: center;
+}
+header.header .nav-bar {
+  margin-right: 50px;
+}
+header.header ul.navigation-links {
+  display: flex;
+  align-items: center;
+}
+header.header ul.navigation-links li {
+  list-style: none;
+  padding: 0 20px;
+}
+header.header ul.navigation-links li a {
+  display: flex;
+  align-items: center;
+}
+header.header ul.navigation-links li a img {
+  width: 15px;
+}/*# sourceMappingURL=header.css.map */

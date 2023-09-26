@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LitColletive</title>
+
+    <link rel="shortcut icon" href="./images/icon.png">
+
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/dark-light-icons.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/footer.css">
+
+
+    <link href="https://vjs.zencdn.net/8.5.2/video-js.css" rel="stylesheet" />
+</head>
+<body>
+    <header class="header">
+        <div class="inner">
+            <a href="./index.html" class="logo"><img src="./images/icon.png" alt="logo"></a>
+            <div class="right-col">
+                <nav class="nav-bar">
+                    <ul class="navigation-links">
+                        <li class="navigation-link"><a class="link" href=""><img src="./images/icon.png" alt="icon">home</a></li>
+                        <li class="navigation-link"><a class="link" href="">cases studies</a></li>
+                        <li class="navigation-link"><a class="link" href="">about us</a></li>
+                        <li class="navigation-link"><a class="link" href="">careers</a></li>
+                        <li class="navigation-link"><a class="link" href="">what we do</a></li>
+                        <li class="navigation-link"><a class="link" href="">contact</a></li>
+                    </ul>
+                </nav>
+                <label for="theme" class="theme">
+                    <span class="theme__toggle-wrap">
+                        <input id="theme" class="theme__toggle" type="checkbox" checked role="switch" name="theme" value="dark">
+                        <span class="theme__icon">
+                            <span class="theme__icon-part"></span>
+                            <span class="theme__icon-part"></span>
+                            <span class="theme__icon-part"></span>
+                            <span class="theme__icon-part"></span>
+                            <span class="theme__icon-part"></span>
+                            <span class="theme__icon-part"></span>
+                            <span class="theme__icon-part"></span>
+                            <span class="theme__icon-part"></span>
+                            <span class="theme__icon-part"></span>
+                        </span>
+                    </span>
+                </label>
+            </div>
+        </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="inner">
+            <section class="home-wrapper" id="home-wrapper">
+                <h1 class="title">We design experiences that move businesses to the future.</h1>
+                <div class="links">
+                    <div class="play-reel"><a href="#video-player" class="btn draw-border">Play showreel</a></div>
+                    <div><a class="btn draw-border" href="">About us</a></div>
+                </div>
+                <div class="vertical-col">
+                    <div class="letter">W.</div>
+                    <div class="nominee">Nominee</div>
+                </div>
+            </section>
+            <section class="reel-wrapper">
+                <div class="video-player" id="video-player">
+                    <video
+                    id="my-video"
+                    class="video-js"
+                    controls
+                    preload="auto"
+                    width="640"
+                    height="480"
+                    poster="./images/video-wrapper.png"
+                    data-setup="{}">
+                        <source src="./video/video.mp4" type="video/mp4" />
+                        <p class="vjs-no-js">
+                        To view this video please enable JavaScript, and consider upgrading to a
+                        web browser that
+                        <a href="https://videojs.com/html5-video-support/" target="_blank"
+                            >supports HTML5 video</a>
+                    </p>
+                </video>
+                </div>
+            </section>
+        </div>
+        <section class="work-together">
+            <div class="inner">
+                <div class="logos">
+                    <div><img src="./images/logos/1.png" alt="logo"></div>
+                    <div><img src="./images/logos/2.png" alt="logo"></div>
+                    <div><img src="./images/logos/3.png" alt="logo"></div>
+                    <div><img src="./images/logos/4.png" alt="logo"></div>
+                    <div><img src="./images/logos/5.png" alt="logo"></div>
+                    <div><img src="./images/logos/6.png" alt="logo"></div>
+                    <div><img src="./images/logos/7.png" alt="logo"></div>
+                    <div><img src="./images/logos/8.png" alt="logo"></div>
+                    <div><img src="./images/logos/9.png" alt="logo"></div>
+                    <div><img src="./images/logos/10.png" alt="logo"></div>
+                    <div><img src="./images/logos/11.png" alt="logo"></div>
+                    <div><img src="./images/logos/12.png" alt="logo"></div>
+                </div>
+                <div class="btns">
+                    <div class="links">
+                        <div class=""><a href="" class="btn draw-border">What we do</a></div>
+                        <div><a class="btn draw-border" href="">Testimonials</a></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="footer">
+
+    </footer>
+    <script src="https://vjs.zencdn.net/8.5.2/video.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
