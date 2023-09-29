@@ -1,1 +1,23 @@
-/*# sourceMappingURL=footer.css.map */
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .inner {
+  max-width: 1440px;
+  width: 100%;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 300px;
+}
+.footer .inner .social-media {
+  display: flex;
+  gap: 30px;
+}
+.footer .inner .social-media .insta-icon, .footer .inner .social-media .facebook-icon, .footer .inner .social-media .whatsapp-icon {
+  width: 30px;
+  height: 30px;
+}/*# sourceMappingURL=footer.css.map */

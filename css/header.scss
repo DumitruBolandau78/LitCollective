@@ -3,6 +3,11 @@ header.header {
     justify-content: center;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
+    position: sticky;
+    top: 0;
+    background-color: #000;
+    z-index: 999;
+    box-shadow: 0 30px 3px -31px rgba(255, 255, 255, 0.5);
 
     .inner {
         display: flex;
@@ -33,9 +38,49 @@ header.header {
             a {
                 display: flex;
                 align-items: center;
+                position: relative;
+
+            &.active {
+                &:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    bottom: -5px;
+                    left: 50%;
+                    height: 1px;
+                    width: 0;
+                    background: transparent;
+                    transition: width .5s ease, background-color .5s ease, left .5s ease;
+                    width: 100%;
+                    left: 0;
+                    background: #fff;
+                }
+            }
+
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: -5px;
+                left: 50%;
+                height: 1px;
+                width: 0;
+                background: transparent;
+            }
+
+            &:after {
+                transition: width .5s ease, background-color .5s ease, left .5s ease;
+            }
+
+            &:hover:after {
+                width: 100%;
+                left: 0;
+                background: #fff;
+            }
 
                 img {
                     width: 15px;
+                    filter: brightness(500%);
                 }
             }
         }

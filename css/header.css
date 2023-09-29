@@ -3,6 +3,11 @@ header.header {
   justify-content: center;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
+  position: sticky;
+  top: 0;
+  background-color: #000;
+  z-index: 999;
+  box-shadow: 0 30px 3px -31px rgba(255, 255, 255, 0.5);
 }
 header.header .inner {
   display: flex;
@@ -30,7 +35,41 @@ header.header ul.navigation-links li {
 header.header ul.navigation-links li a {
   display: flex;
   align-items: center;
+  position: relative;
+}
+header.header ul.navigation-links li a.active:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  height: 1px;
+  width: 0;
+  background: transparent;
+  transition: width 0.5s ease, background-color 0.5s ease, left 0.5s ease;
+  width: 100%;
+  left: 0;
+  background: #fff;
+}
+header.header ul.navigation-links li a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  height: 1px;
+  width: 0;
+  background: transparent;
+}
+header.header ul.navigation-links li a:after {
+  transition: width 0.5s ease, background-color 0.5s ease, left 0.5s ease;
+}
+header.header ul.navigation-links li a:hover:after {
+  width: 100%;
+  left: 0;
+  background: #fff;
 }
 header.header ul.navigation-links li a img {
   width: 15px;
+  filter: brightness(500%);
 }/*# sourceMappingURL=header.css.map */

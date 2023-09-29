@@ -7,3 +7,6 @@ videoPlayer.addEventListener('click', () => {
 document.querySelector('.play-reel a').addEventListener('click', () => {
     document.querySelector('video').click();
 });
+
+
+const navList = document.querySelectorAll('header a');

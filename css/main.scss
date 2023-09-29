@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Mukta:700');
 
 @mixin btn-border-drawing($color: #ccc, $hover: black, $width: 2px, $vertical: top, $horizontal: left, $duration: 0.25s) {
     box-shadow: inset 0 0 0 $width $color;
@@ -90,9 +91,8 @@ body {
         max-width: 1440px;
 
         .home-wrapper {
-            margin-top: 100px;
             position: relative;
-            padding: 0 150px;
+            padding: 100px 150px 0 150px;
 
             .title {
                 font-size: 60px;
@@ -127,7 +127,7 @@ body {
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            margin: 150px 0;
+            padding: 150px 0;
             display: flex;
             justify-content: center;
 
@@ -172,6 +172,7 @@ body {
         width: 100%;
         padding: 20px 30px;
         background: linear-gradient(#000, rgba(14, 14, 14, 0.91));
+        padding-bottom: 100px;
 
         .inner {
             display: flex;
@@ -195,6 +196,195 @@ body {
             img {
                 width: 100%;
                 max-width: 100px;
+            }
+        }
+    }
+}
+
+.container .inner.second {
+    padding-top: 0;
+
+    .about-us-and-careers-wrapper {
+        display: flex;
+        width: 100%;
+        padding-top: 100px;
+        margin-top: -100px;
+
+        .about-us, .careers {
+            position: relative;
+
+            .link {
+                margin-top: 30px;
+            }
+        }
+
+        .about-us .content {
+            position: absolute;
+            bottom: 10%;
+            left: 10%;
+        }
+
+        .description {
+            font-size: 25px;
+            font-weight: 200;
+            max-width: 70%;
+        }
+
+        .careers .content {
+            position: absolute;
+            top: 10%;
+            left: 10%;
+        }
+
+        img {
+            width: 100%;
+            object-position: center;
+            object-fit: cover;
+            aspect-ratio: 1/1;
+        }
+
+        .title {
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            font-size: 25px;
+
+            img {
+                width: 25px;
+                filter: hue-rotate(90deg);
+            }
+        }
+
+        $bg: #f3f8fa;
+        $white: #fff;
+        $black: #282936;
+
+        @mixin transition($property: all, $duration: 0.45s, $ease: cubic-bezier(0.65,0,.076,1)) {
+        transition: $property $duration $ease;
+        }
+
+        a {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid $white;
+        border-radius: 30px;
+        vertical-align: middle;
+        text-decoration: none;
+        background: transparent;
+        padding: 0;
+        font-family: 'Mukta', sans-serif;
+        &.learn-more {
+            width: 12rem;
+            height: auto;
+            .circle {
+            @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+            position: relative;
+            display: block;
+            margin: 0;
+            width: 3rem;
+            height: 3rem;
+            background: rgb(221, 59, 0);
+            border-radius: 1.625rem;
+            .icon {
+                @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                background: $white;
+                &.arrow {
+                @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+                left: 0.625rem;
+                width: 1.125rem;
+                height: 0.125rem;
+                background: none;
+                &::before {
+                    position: absolute;
+                    content: '';
+                    top: -0.25rem;
+                    right: 0.0625rem;
+                    width: 0.625rem;
+                    height: 0.625rem;
+                    border-top: 0.125rem solid #fff;
+                    border-right: 0.125rem solid #fff;
+                    transform: rotate(45deg);
+                }
+                }
+            }
+            }
+            .button-text {
+            @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 0.75rem 0;
+            margin: 0 0 0 1.85rem;
+            color: $white;
+            font-weight: 700;
+            line-height: 1.6;
+            text-align: center;
+            text-transform: uppercase;
+            }
+        }
+        &:hover {
+            .circle {
+            width: 100%;
+            .icon {
+                &.arrow {
+                background: $white;
+                transform: translate(1rem, 0);
+                }
+            }
+            }
+            .button-text {
+            color: $white;
+            }
+        }
+        }
+    }
+
+    .contact-us {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px 0;
+
+        .title {
+            font-weight: 300;
+            font-size: 40px;
+        }
+
+        .left-col {
+            width: 100%;
+            padding-left: 5%;
+        }
+
+        .right-col {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+
+            button {
+                background-color: transparent;
+                border: none;
+                font-size: 17px;
+                padding: 8px 30px;
+                cursor: pointer;
+                border-bottom: 1px solid white;
+                border-radius: 30px;
+                transition: .4s;
+                font-family: 'Manrope', sans-serif;
+
+                &:hover {
+                    color: yellow;
+                }
             }
         }
     }
