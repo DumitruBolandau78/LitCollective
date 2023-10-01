@@ -162,9 +162,6 @@ header.header input {
 .theme__toggle:checked ~ .theme__icon .theme__icon-part:nth-child(9) {
 	transform: rotate(360deg) translateY(0.8em);
 }
-.theme__toggle-wrap {
-	margin: 0 0.75em;
-}
 
 @supports selector(:focus-visible) {
 	.theme__toggle:focus {

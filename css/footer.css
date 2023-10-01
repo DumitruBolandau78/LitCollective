@@ -3,6 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 14px;
 }
 .footer .inner {
   max-width: 1440px;
@@ -20,4 +21,10 @@
 .footer .inner .social-media .insta-icon, .footer .inner .social-media .facebook-icon, .footer .inner .social-media .whatsapp-icon {
   width: 30px;
   height: 30px;
+}
+
+@media (max-width: 640px) {
+  .footer .inner {
+    gap: 50px;
+  }
 }/*# sourceMappingURL=footer.css.map */

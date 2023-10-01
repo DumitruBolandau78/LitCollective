@@ -1,5 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;800&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Mukta:700");
+:root {
+  --color-first: #fff;
+  --color-second: #000;
+  --color-third: #111111;
+  --shadow: rgba(255, 255, 255, 0.5);
+  --procent: 500%;
+  --linear-grad: rgba(14, 14, 14, 0.91);
+  --btn-draw-border-first: #58afd1;
+  --btn-draw-border-second: #ffe593;
+}
+
+.light-mode {
+  --color-first: #111111;
+  --color-second: #fff;
+  --color-third: #fff;
+  --shadow: rgba(34, 34, 34, 0.5);
+  --procent: 100%;
+  --linear-grad: #fff;
+  --btn-draw-border-first: #107ba5;
+  --btn-draw-border-second: rgb(221, 59, 0);
+}
+
 *,
 *::before,
 *::after {
@@ -7,7 +29,7 @@
   padding: 0;
   margin: 0;
   text-decoration: none;
-  color: #fff;
+  color: var(--color-first);
 }
 
 html {
@@ -15,7 +37,7 @@ html {
 }
 
 body {
-  background-color: #000;
+  background-color: var(--color-second);
   font-family: "Manrope", sans-serif;
   cursor: default;
   margin: 0;
@@ -36,7 +58,7 @@ body {
 }
 .container .inner .home-wrapper {
   position: relative;
-  padding: 100px 150px 0 150px;
+  padding: 100px 150px 100px 150px;
 }
 .container .inner .home-wrapper .title {
   font-size: 60px;
@@ -65,7 +87,6 @@ body {
   background-image: url("../images/hands.png");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
   padding: 150px 0;
   display: flex;
   justify-content: center;
@@ -78,15 +99,18 @@ body {
 }
 .container .inner .links {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 40px;
   margin-top: 50px;
 }
 .container .inner .links .draw-border {
-  box-shadow: inset 0 0 0 4px #58afd1;
-  color: #58afd1;
+  box-shadow: inset 0 0 0 4px var(--btn-draw-border-first);
+  color: var(--btn-draw-border-first);
   transition: color 0.25s 0.0833333333s;
   position: relative;
   padding: 15px 40px;
+  font-size: 14px;
 }
 .container .inner .links .draw-border::before, .container .inner .links .draw-border::after {
   border: 0 solid transparent;
@@ -108,10 +132,10 @@ body {
   border-right-width: 4px;
 }
 .container .inner .links .draw-border:hover {
-  color: #ffe593;
+  color: var(--btn-draw-border-second);
 }
 .container .inner .links .draw-border:hover::before, .container .inner .links .draw-border:hover::after {
-  border-color: #ffe593;
+  border-color: var(--btn-draw-border-second);
   transition: border-color 0s, width 0.25s, height 0.25s;
   width: 100%;
   height: 100%;
@@ -138,7 +162,7 @@ body {
   justify-content: center;
   width: 100%;
   padding: 20px 30px;
-  background: linear-gradient(#000, rgba(14, 14, 14, 0.91));
+  background: linear-gradient(var(--color-second), var(--linear-grad));
   padding-bottom: 100px;
 }
 .container .work-together .inner {
@@ -176,7 +200,7 @@ body {
   position: relative;
 }
 .container .inner.second .about-us-and-careers-wrapper .about-us .link, .container .inner.second .about-us-and-careers-wrapper .careers .link {
-  margin-top: 30px;
+  margin: 30px 15px 0 15px;
 }
 .container .inner.second .about-us-and-careers-wrapper .about-us .content {
   position: absolute;
@@ -187,6 +211,7 @@ body {
   font-size: 25px;
   font-weight: 200;
   max-width: 70%;
+  color: #fff;
 }
 .container .inner.second .about-us-and-careers-wrapper .careers .content {
   position: absolute;
@@ -206,6 +231,7 @@ body {
   align-items: center;
   font-weight: bold;
   font-size: 25px;
+  color: #fff;
 }
 .container .inner.second .about-us-and-careers-wrapper .title img {
   width: 25px;
@@ -220,6 +246,7 @@ body {
   border-bottom: 1px solid #fff;
   border-radius: 30px;
   vertical-align: middle;
+  font-size: 13px;
   text-decoration: none;
   background: transparent;
   padding: 0;
@@ -227,7 +254,8 @@ body {
 }
 .container .inner.second .about-us-and-careers-wrapper a.learn-more {
   width: 12rem;
-  height: auto;
+  height: -moz-max-content;
+  height: max-content;
 }
 .container .inner.second .about-us-and-careers-wrapper a.learn-more .circle {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
@@ -279,6 +307,8 @@ body {
   line-height: 1.6;
   text-align: center;
   text-transform: uppercase;
+  font-size: 13px;
+  display: block;
 }
 .container .inner.second .about-us-and-careers-wrapper a:hover .circle {
   width: 100%;
@@ -317,11 +347,70 @@ body {
   font-size: 17px;
   padding: 8px 30px;
   cursor: pointer;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid var(--color-first);
   border-radius: 30px;
   transition: 0.4s;
   font-family: "Manrope", sans-serif;
 }
 .container .inner.second .contact-us .right-col button:hover {
-  color: yellow;
+  color: #900;
+}
+
+@media (max-width: 992px) {
+  .container .inner .home-wrapper {
+    padding: 100px;
+  }
+}
+@media (max-width: 920px) {
+  .container .inner.second .contact-us {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .container .inner.second .contact-us .left-col {
+    display: flex;
+    justify-content: center;
+    padding: 0 !important;
+  }
+  .work-together .logos {
+    width: 100% !important;
+  }
+}
+@media (max-width: 780px) {
+  .about-us-and-careers-wrapper {
+    flex-direction: column;
+  }
+}
+@media (max-width: 720px) {
+  .container .inner .home-wrapper {
+    padding: 100px 30px 100px 30px !important;
+  }
+}
+@media (max-width: 700px) {
+  .video-player {
+    transform: scale(0.9) !important;
+  }
+}
+@media (max-width: 600px) {
+  .video-player {
+    transform: scale(0.7) !important;
+  }
+  .home-wrapper .title {
+    font-size: 50px !important;
+  }
+}
+@media (max-width: 470px) {
+  .video-player {
+    transform: scale(0.5) !important;
+  }
+  .right-col {
+    flex-direction: column;
+  }
+}
+@media (max-width: 420px) {
+  .video-player {
+    transform: scale(0.4) !important;
+  }
+  .home-wrapper .title {
+    font-size: 40px !important;
+  }
 }/*# sourceMappingURL=main.css.map */
