@@ -9,6 +9,7 @@
   --linear-grad: rgba(14, 14, 14, 0.91);
   --btn-draw-border-first: #58afd1;
   --btn-draw-border-second: #ffe593;
+  --btn-hover: yellow;
 }
 
 .light-mode {
@@ -20,6 +21,7 @@
   --linear-grad: #fff;
   --btn-draw-border-first: #107ba5;
   --btn-draw-border-second: rgb(221, 59, 0);
+  --btn-hover: #900;
 }
 
 *,
@@ -111,6 +113,7 @@ body {
   position: relative;
   padding: 15px 40px;
   font-size: 14px;
+  white-space: nowrap;
 }
 .container .inner .links .draw-border::before, .container .inner .links .draw-border::after {
   border: 0 solid transparent;
@@ -196,6 +199,42 @@ body {
   padding-top: 100px;
   margin-top: -100px;
 }
+.container .inner.second .about-us-and-careers-wrapper a.learn-more {
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 50px;
+  border-bottom: 1px solid #fff;
+  width: 200px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: #fff;
+}
+.container .inner.second .about-us-and-careers-wrapper a.learn-more:hover span:first-child {
+  width: 200px;
+}
+.container .inner.second .about-us-and-careers-wrapper a.learn-more .button-text {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+.container .inner.second .about-us-and-careers-wrapper a.learn-more span:first-child {
+  background-color: orangered;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 45px;
+  height: 45px;
+  border-radius: 50px;
+  transition: 0.5s;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #fff;
+  padding-left: 15px;
+}
 .container .inner.second .about-us-and-careers-wrapper .about-us, .container .inner.second .about-us-and-careers-wrapper .careers {
   position: relative;
 }
@@ -237,89 +276,6 @@ body {
   width: 25px;
   filter: hue-rotate(90deg);
 }
-.container .inner.second .about-us-and-careers-wrapper a {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  outline: none;
-  border: none;
-  border-bottom: 1px solid #fff;
-  border-radius: 30px;
-  vertical-align: middle;
-  font-size: 13px;
-  text-decoration: none;
-  background: transparent;
-  padding: 0;
-  font-family: "Mukta", sans-serif;
-}
-.container .inner.second .about-us-and-careers-wrapper a.learn-more {
-  width: 12rem;
-  height: -moz-max-content;
-  height: max-content;
-}
-.container .inner.second .about-us-and-careers-wrapper a.learn-more .circle {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  position: relative;
-  display: block;
-  margin: 0;
-  width: 3rem;
-  height: 3rem;
-  background: rgb(221, 59, 0);
-  border-radius: 1.625rem;
-}
-.container .inner.second .about-us-and-careers-wrapper a.learn-more .circle .icon {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  background: #fff;
-}
-.container .inner.second .about-us-and-careers-wrapper a.learn-more .circle .icon.arrow {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  left: 0.625rem;
-  width: 1.125rem;
-  height: 0.125rem;
-  background: none;
-}
-.container .inner.second .about-us-and-careers-wrapper a.learn-more .circle .icon.arrow::before {
-  position: absolute;
-  content: "";
-  top: -0.25rem;
-  right: 0.0625rem;
-  width: 0.625rem;
-  height: 0.625rem;
-  border-top: 0.125rem solid #fff;
-  border-right: 0.125rem solid #fff;
-  transform: rotate(45deg);
-}
-.container .inner.second .about-us-and-careers-wrapper a.learn-more .button-text {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 0.75rem 0;
-  margin: 0 0 0 1.85rem;
-  color: #fff;
-  font-weight: 700;
-  line-height: 1.6;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 13px;
-  display: block;
-}
-.container .inner.second .about-us-and-careers-wrapper a:hover .circle {
-  width: 100%;
-}
-.container .inner.second .about-us-and-careers-wrapper a:hover .circle .icon.arrow {
-  background: #fff;
-  transform: translate(1rem, 0);
-}
-.container .inner.second .about-us-and-careers-wrapper a:hover .button-text {
-  color: #fff;
-}
 .container .inner.second .contact-us {
   display: flex;
   justify-content: space-between;
@@ -353,7 +309,7 @@ body {
   font-family: "Manrope", sans-serif;
 }
 .container .inner.second .contact-us .right-col button:hover {
-  color: #900;
+  color: var(--btn-hover);
 }
 
 @media (max-width: 992px) {
@@ -378,6 +334,7 @@ body {
 @media (max-width: 780px) {
   .about-us-and-careers-wrapper {
     flex-direction: column;
+    gap: 30px;
   }
 }
 @media (max-width: 720px) {
@@ -387,30 +344,59 @@ body {
 }
 @media (max-width: 700px) {
   .video-player {
-    transform: scale(0.9) !important;
+    transform: scale(0.9) rotate(-7deg) !important;
+  }
+  .reel-wrapper {
+    padding: 100px 0 !important;
   }
 }
 @media (max-width: 600px) {
   .video-player {
-    transform: scale(0.7) !important;
+    transform: scale(0.7) rotate(-7deg) !important;
   }
   .home-wrapper .title {
     font-size: 50px !important;
   }
+  .reel-wrapper {
+    padding: 40px 0 !important;
+  }
+  .logos {
+    grid-template-columns: 1fr 1fr !important;
+  }
 }
 @media (max-width: 470px) {
   .video-player {
-    transform: scale(0.5) !important;
+    transform: scale(0.5) rotate(-7deg) !important;
+  }
+  .home-wrapper .title {
+    font-size: 35px !important;
   }
   .right-col {
     flex-direction: column;
   }
+  .reel-wrapper {
+    padding: 0px 0 !important;
+  }
 }
 @media (max-width: 420px) {
   .video-player {
-    transform: scale(0.4) !important;
+    transform: scale(0.4) rotate(-7deg) !important;
   }
   .home-wrapper .title {
     font-size: 40px !important;
+  }
+}
+@media (max-width: 380px) {
+  .about-us-and-careers-wrapper .content .description {
+    max-width: 100% !important;
+  }
+  a.learn-more {
+    width: 170px !important;
+  }
+  a.learn-more:hover span:first-child {
+    width: 170px !important;
+  }
+  .logos {
+    grid-template-columns: 1fr !important;
   }
 }/*# sourceMappingURL=main.css.map */
