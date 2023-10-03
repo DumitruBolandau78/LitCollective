@@ -16,3 +16,10 @@ document.querySelector('.nav-bar-icon').addEventListener('click', () => {
     document.querySelector('.nav-bar-icon-color').classList.toggle('active');
     document.querySelector('.nav-bar-mobile').classList.toggle('active');
 });
+
+document.querySelectorAll('.nav-bar-mobile a').forEach(link => {
+    link.addEventListener('click', () => {
+        document.querySelector('.nav-bar-icon-color').classList.toggle('active');
+        document.querySelector('.nav-bar-mobile').classList.toggle('active');
+    });
+});
