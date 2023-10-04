@@ -153,14 +153,6 @@ body {
             padding: 150px 0;
             display: flex;
             justify-content: center;
-
-            .video-player {
-                transform: rotate(-7deg);
-
-                &.active {
-                    transform: rotate(0deg) !important;
-                }
-            }
         }
 
         .links {
@@ -413,7 +405,7 @@ body {
 
 @media (max-width: 700px){
     .video-player {
-        transform: scale(.9) rotate(-7deg) !important;
+        transform: scale(.9) !important;
     }
 
     .reel-wrapper {
@@ -423,7 +415,7 @@ body {
 
 @media (max-width: 600px){
     .video-player {
-        transform: scale(.7) rotate(-7deg) !important;
+        transform: scale(.7) !important;
     }
 
     .home-wrapper .title {
@@ -441,7 +433,7 @@ body {
 
 @media (max-width: 470px){
     .video-player {
-        transform: scale(.5) rotate(-7deg) !important;
+        transform: scale(.5) !important;
     }
 
     .home-wrapper .title {
@@ -460,7 +452,7 @@ body {
 @media (max-width: 420px){
 
     .video-player {
-        transform: scale(.4) rotate(-7deg) !important;
+        transform: scale(.4) !important;
     }
 
     .home-wrapper .title {
